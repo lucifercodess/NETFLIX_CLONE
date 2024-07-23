@@ -16,10 +16,10 @@ dotenv.config();
 const PORT = ENV_VARS.PORT; // created a seperate env file where we store env variables
 
 app.use("/api/v1/auth", authRoutes); // v1 as the version used for best pratices whiel developing
-app.use("/api/v1/movies",protectRoute, movieRoutes); 
-app.use("/api/v1/tv-show",protectRoute, tvShowRoutes); 
+app.use("/api/v1/movie",protectRoute, movieRoutes); 
+app.use("/api/v1/tv",protectRoute, tvShowRoutes); 
 app.use("/api/v1/search",protectRoute, searchRoutes); 
-app.listen(5600, () => {
+app.listen(PORT, () => {
   console.log(`server is running on port ${PORT}`);
   connectDb();
 });

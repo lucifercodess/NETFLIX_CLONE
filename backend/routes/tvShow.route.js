@@ -9,7 +9,7 @@ import {
 
 const router = express.Router();
 
-router.get("/trending-movies", getTrendingTvShows); // trending tv show route
+router.get("/trending", getTrendingTvShows); // trending tv show route
 router.get("/:id/trailers", getTvShowTrailers); // trailers route
 router.get("/:id/details", getTvShowDetails); // detaild of the tv show route
 router.get("/:id/similar", getSimilarTvShow); // similar tv show  route

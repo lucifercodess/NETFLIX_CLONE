@@ -31,7 +31,7 @@ export const getMovieDetails = async(req,res)=>{  // fetches the movie details
   const {id} = req.params;
   try {
     const data = await fetchFromTMDB(`https://api.themoviedb.org/3/movie/${id}?language=en-US`)
-    res.json({success:true,details: data});
+    res.json({success:true,content: data});
 
   } catch (error) {
     if(error.message.includes('404')){
